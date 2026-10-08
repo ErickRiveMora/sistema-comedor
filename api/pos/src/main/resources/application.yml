@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: pos
+  datasource:
+    url: jdbc:postgresql://localhost:5432/comedor_pos
+    username: postgres
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# Configuración de Puertos COM virtuales para las impresoras Bluetooth
+pos:
+  impresora:
+    caja: "COM3"
+    cocina: "COM4"
